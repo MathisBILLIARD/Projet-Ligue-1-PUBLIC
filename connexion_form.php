@@ -6,8 +6,13 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>inscription</title>
+        <title>connexion</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="connexion_form.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
     </head>
 
     <?php
@@ -58,21 +63,28 @@
     ?>
 
     <body>
+
+        <!-- image (logo) -->
+        <a href="index.php"><img class="logo" src="bidoobet.png" alt=""></a>
         
         <form method="POST">
+
+
         
-         
+                <h1>Connexion</h1>
+
+
+                <?php echo "<p>".$emailError."</p>"; ?><input class="saisie" type="text" id="email" name="email" placeholder="Votre adresse Email">
+        
+                                
+
+                <?php echo "<p>".$mdpError."</p>";  ?><input class="saisie" type="text" id="mdp" name="mdp" placeholder="Votre mot de passe" >
+                
+                <?php echo "<p>".$RetourRequete."</p>";  ?>
+        
+                <input class="send "Type="submit" name="Envoyer" value="Envoyer">
+
                     
-            <label for="email">Email : </label>
-            <input type="text" id="email" name="email"><?php echo $emailError; ?><br/>
-    
-                            
-            <label for="prenom">Mot de passe : </label>
-            <input type="text" id="mdp" name="mdp"><?php echo $mdpError;  ?><br/>
-            
-            <?php echo $RetourRequete;  ?>
-            </br>
-            <input Type="submit" name="Envoyer" value="Envoyer">
                     
         </form>
         
