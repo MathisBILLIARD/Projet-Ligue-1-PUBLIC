@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 10% 1fr 10%;
+}
+
+html{
+    background-image: linear-gradient(45deg, rgb(51, 138, 249),rgb(47, 248, 255));
+}
+
+.logo{
+    width: 120px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-left: 25px;
+    margin-top: 25px;
+    -webkit-transition: all 0.1s ease;
+}
+
+.logo:hover{
+    transform: scale(1.12);
+}
+
+h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    font-weight: 100;
+}
+
+
+p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 15px;
+}
+
+form{
+    grid-column-start: 2;
+    grid-row-start: 2;    
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+   
+
+}
+
+.submit{
+
+    height: 40px;
+    width: 100px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center; 
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    -webkit-transition: all 0.1s ease;
+    margin: 10px;
+}
+
+.submit:hover{
+    transform: scale(1.12);
+}  
+
+input.saisie{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+    border-radius: 5px;
+    margin: 9px;
+    width: 300px;
+}
+
+input{
+    margin: 10px;
+}
+
