@@ -47,7 +47,7 @@
                         //on ouvre la session avec $_SESSION:
                         //la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
                         $rows = mysqli_fetch_assoc($resultat);
-                        $role = $rows['Role'];
+                        $role = $rows['Rôle'];
                         
                         echo "</br> $role";
                         $_SESSION['role'] = $role;

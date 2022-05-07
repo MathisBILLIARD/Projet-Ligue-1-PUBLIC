@@ -152,6 +152,8 @@
 						echo "<p>Erreur d'exécution de la requete :".mysqli_error($connexion)."</p>" ;
 						die();
 					}
+
+					header("Location:connexion_form.php");
 				
 				}
             }
@@ -174,16 +176,16 @@
 			<label for="email">Email : </label>
 			<input type="text" id="email" name="email"><?php echo $emailError; echo $mail_valid; ?><br/>
 
-            <label for="prenom">Numéro de tel : </label>
+            <label for="tel">Numéro de tel : </label>
 			<input type="text" id="num_tel" name="num_tel"><?php echo $numTelError; ?><br/>
 				
 			<label for="dateN">Date de naissance : </label>
 			<input type="date" id="dateN" name="dateN"><?php echo $dateError; ?><br/>
             		
-			<label for="prenom">Mot de passe : </label>
+			<label for="mdp">Mot de passe : </label>
 			<input type="text" id="mdp" name="mdp"><?php echo $mdpError; echo $mdp_valid; ?><br/>
 
-            <label for="prenom">Confirmer le Mot de passe : </label>
+            <label for="mdp_confirm">Confirmer le Mot de passe : </label>
 			<input type="text" id="mdp_confirm" name="mdp_confirm"><?php echo $mdp_confirmError; ?><br/>
 			
 			<input Type="submit" name="Envoyer" value="Envoyer">
