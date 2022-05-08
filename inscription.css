@@ -16,7 +16,7 @@ html{
     grid-row-start: 1;
     margin-left: 25px;
     margin-top: 25px;
-    -webkit-transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease; 
 }
 
 .logo:hover{
@@ -52,7 +52,7 @@ form{
     align-items: center;
     border-radius: 20px;
 
-   
+
 
 }
 
@@ -91,4 +91,3 @@ input.saisie{
 input{
     margin: 10px;
 }
-

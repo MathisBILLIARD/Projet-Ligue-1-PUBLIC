@@ -60,11 +60,15 @@
                                 
                                     echo'<img class="photo" src="images/'.$image.'.jpg" alt="'.$image.'">';
 
-                                    echo '<form class="equipeD" method="post"><input type="submit" name="envoie_prono" value='.$equipeD.'></form>';
+                                    echo '<form class="equipeD" method="post"><input type="submit" name="envoie_prono_equipeD" value='.$equipeD.'></form>';
+                                    if(isset($_POST['envoie_prono_equipeD'])){
+                                        $_SESSION['prono'] = $equipeD;
+                                        header("Location:prono_equipeD.php");
+                                    }
                                     echo "<p class='coteEquipeD'> $coteEquipeD";
-                                    echo '<form class="matchNul" method="post"><input type="submit" name="envoie_prono" value="Match nul"></form>';
+                                    echo '<form class="matchNul" method="post" action="prono_match_nul.php"><input type="submit" name="envoie_prono_nul" value="Match nul"></form>';
                                     echo "<p class='coteMatchNul'> $coteMatchNul";
-                                    echo '<form class="equipeE" method="post"><input type="submit" name="envoie_prono" value='.$equipeE.'></form>';
+                                    echo '<form class="equipeE" method="post" action="prono_equipeE.php"><input type="submit" name="envoie_prono_equipeE" value='.$equipeE.'></form>';
                                     echo "<p class='coteEquipeE'> $coteEquipeE";
                                     echo '</div>';
                                     $i++;

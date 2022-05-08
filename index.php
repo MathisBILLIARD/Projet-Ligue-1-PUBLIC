@@ -11,7 +11,7 @@
     <body>
      
         <!-- image (logo) -->
-        <img class="logo" src="bidoobet.png" alt="">
+        <img class="logo" src="images/bidoobet.png" alt="">
         <!-- texte de bienvenue -->
         <div class="bloc_bienvenue">
             <h1>Bienvenue</h1>

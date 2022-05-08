@@ -3,6 +3,7 @@
     <head>
         <title>inscription</title>
         <meta charset="utf-8" />
+		<link rel="stylesheet" href="inscription.css">
     </head>
 
     <?php
@@ -86,17 +87,7 @@
 					$globalError = 1;
 				}
 				else{
-					// date aujourd'hui
-					/*$dateDuJour = date("Y-m-d");
-					$dateDuJour = (int)$dateDuJour;
-					echo $dateDuJour;
-					echo "</br>";
-					$testdate = $_POST['dateN'];
-					$testdate = (int)$testdate;
-					echo $testdate;
-					echo "</br>";
 					
-					if (($dateDuJour - $testdate) < 18){*/
 					if ((new \DateTime())->diff(new \DateTime($_POST['dateN']))->format('%y') < 18){
     					$dateError = "Vous êtes mineur, interdit aux paris sportifs";//le visiteur a moins 18 ans
 						$globalError = 1;
@@ -164,6 +155,8 @@
         ?>
 
     <body>
+
+		<a href="index.php"><img class="logo" src="images/bidoobet.png" alt=""></a>
 
         <form method="POST">
 

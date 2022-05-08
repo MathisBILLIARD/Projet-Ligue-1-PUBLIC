@@ -48,9 +48,10 @@
                         //la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
                         $rows = mysqli_fetch_assoc($resultat);
                         $role = $rows['Rôle'];
-                        
-                        echo "</br> $role";
+                        $id = $rows['ID'];
+                    
                         $_SESSION['role'] = $role;
+                        $_SESSION['id'] = $id;
                         if($_SESSION['role'] == "Admin"){
                             header("Location:admin.php");
                         }
@@ -65,7 +66,7 @@
     <body>
 
         <!-- image (logo) -->
-        <a href="index.php"><img class="logo" src="bidoobet.png" alt=""></a>
+        <a href="index.php"><img class="logo" src="images/bidoobet.png" alt=""></a>
         
         <form method="POST">
 
