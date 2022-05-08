@@ -2,6 +2,9 @@
 
 	session_start(); //Démarrer la session
 	if($_SESSION['role']=='Admin' || $_SESSION['role']=='Client'){ // si l'utilisateur est authentifié (client ou admin) alors on affiche la page
+
+    require 'theme2.php'
+
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +16,8 @@
         </head>
 
         <body>
+
+        
 
         <header>
 
