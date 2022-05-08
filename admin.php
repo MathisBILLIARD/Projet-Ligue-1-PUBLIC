@@ -1,3 +1,5 @@
+
+
 <?php 
 
 	session_start(); //Démarrer la session
@@ -9,15 +11,18 @@
         <head>
             <title>inscription</title>
             <meta charset="utf-8" />
-            <style>
-                body{padding:3%;}
-                table,td,th{border: solid; border-collapse:collapse;text-align:center;width: 300px;height: 50px;}
-            </style>
+            <link rel="stylesheet" href="admin.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         </head>
         
+            		
         <body>
 
-            <a href="logout.php">Déconnexion</a> 
+
+            <main>
+
 
             <?php
 
@@ -59,8 +64,8 @@
 
             <br/>
             <form name="ajout" action="ajout_match.php" method="post">
-                        <fieldset>
-                            <legend>Ajouter un match</legend>
+
+
                             
                             <label for="equipeD">Equipe a Domicile : </label>
                             <input type="text" id="equipeD" name="equipeD"><br/><br/>
@@ -87,9 +92,9 @@
                             <input type="text" id="championnat" name="championnat"><br/><br/>
                             
                             <input Type="submit" name="Ajouter" value="Ajouter">
-                        </fieldset>
+
                     </form>
-        </body>           
+           
             <?php
 
             $requete_match ="SELECT * FROM matchs";//La requere SQL
@@ -104,7 +109,7 @@
                 $nbreLignes_match= mysqli_num_rows($resultat_match); //Nombre de ligne du retour de la requete
 
                 echo "<table>";
-                    echo"<tr>";
+                        echo"<tr>";
                         echo"<th>id</th>";
                         echo"<th>Equipe a Domicile</th>";
                         echo"<th>Equipe a l'Exterieur</th>";
@@ -116,7 +121,7 @@
                         echo"<th>Heure</th>";
                         echo"<th>Championnat</th>";
                         echo"<th colspan=2>Action</th>";
-                    echo"</tr>";
+                        echo"</tr>";
         
                 if( $nbreLignes >0){
 					while($rows = mysqli_fetch_assoc($resultat_match)){
@@ -144,3 +149,14 @@ else{ //SINON : si l'utilisateur n'es pas authentifié => redirection vers la pa
 	header("Location:connexion_form.php");
 }
 ?>
+    <div class="dec">
+        <a class="deco" href="logout.php">Déconnexion</a> 
+    </div>
+
+            </main>
+
+
+    
+</body>
+
+
