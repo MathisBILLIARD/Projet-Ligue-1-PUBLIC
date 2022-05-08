@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    height: 100%;
+
+
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+html{
+    height: 100%;
+    background-image: linear-gradient(45deg, rgb(51, 138, 249),rgb(47, 248, 255));
+}
+
+table,td,th{
+    border-style: solid; 
+    font-family: 'Roboto', sans-serif;
+    border-color: rgba(0,0,0,0.3);
+    text-align:center;
+
+
+}
+
+a,td{
+    color: white;
+    text-decoration: none;
+}
+
+th{
+    padding: 15px;
+    color: white;
+}
+
+table{
+    background: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+p,.deco{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.logo{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 120px;
+}
+
+label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+form{
+    background: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    border-style: solid;
+    padding: 30px;
+}
+
+.dec{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: rgba(0,0,0,0.3);
+
+    border-radius: 10px;
+
+}
